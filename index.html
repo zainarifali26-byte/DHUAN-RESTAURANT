@@ -3,189 +3,264 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>DHUAN · Charcoal Kitchen, Lahore</title>
-    <meta name="description" content="DHUAN is a charcoal kitchen in Lahore: seekh kebabs, karahi, tandoor breads and doodh patti. See the menu, order on WhatsApp or book a table." />
-    <meta name="theme-color" content="#120d0a" />
-    <meta property="og:title" content="DHUAN · Charcoal Kitchen, Lahore" />
-    <meta property="og:description" content="Slow fire, loud flavour. Menu, WhatsApp ordering and table booking." />
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23120d0a'/%3E%3Cpath d='M16 6c3 4 6 7 6 11a6 6 0 0 1-12 0c0-2 1-4 2-5 0 2 1 3 2 3 0-3 0-6 2-9z' fill='%23ff6a2b'/%3E%3C/svg%3E" />
+    <title>Onyx &amp; Fog · Wood-fire tasting counter, San Francisco</title>
+    <meta name="description" content="Onyx & Fog is a fourteen-seat wood-fire tasting counter in Dogpatch, San Francisco. Seven courses over almond wood and binchotan. See tonight's menu and reserve a seat." />
+    <meta name="theme-color" content="#0c0b0a" />
+    <meta property="og:title" content="Onyx & Fog · San Francisco" />
+    <meta property="og:description" content="Fire, fog and seven courses. A fourteen-seat tasting counter in Dogpatch." />
+    <meta property="og:image" content="/img/hero.webp" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%230c0b0a'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia' font-size='17' fill='%23d6a75c'%3E%26%3C/text%3E%3C/svg%3E" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="preload" as="image" href="img/hero.webp" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
 
+    <div class="curtain" id="curtain" aria-hidden="true">
+      <p class="curtain-mark"><span>Onyx</span> <em>&amp;</em> <span>Fog</span></p>
+    </div>
+
+    <div class="cursor" id="cursor" aria-hidden="true"><span></span></div>
+
     <header class="nav" id="nav">
-      <a class="logo" href="#top">DHUAN<span>Charcoal Kitchen</span></a>
-      <nav aria-label="Main">
-        <ul class="nav-links">
-          <li><a href="#signature">Signature</a></li>
-          <li><a href="#menu">Menu</a></li>
-          <li><a href="#book">Book a table</a></li>
-          <li><a href="#visit">Visit</a></li>
-        </ul>
+      <nav class="nav-side" aria-label="Main">
+        <a href="#menu">Menu</a>
+        <a href="#room">The room</a>
+        <a href="#visit">Visit</a>
       </nav>
-      <a class="btn btn-fire btn-sm" href="#menu">Order now</a>
+      <a class="wordmark" href="#top">Onyx <em>&amp;</em> Fog</a>
+      <div class="nav-side nav-end">
+        <span class="nav-meta"><i class="live-dot"></i>Seatings 5:30 &amp; 8:45</span>
+        <a class="btn btn-gold btn-sm" href="#reserve">Reserve</a>
+      </div>
     </header>
 
     <main id="main" tabindex="-1">
-      <section class="hero" id="top">
-        <canvas class="embers" id="embers" aria-hidden="true"></canvas>
-        <div class="wrap hero-inner">
-          <p class="kicker">Charcoal kitchen · Gulberg, Lahore</p>
-          <h1>Slow fire.<br /><em>Loud</em> flavour.</h1>
-          <p class="lead">Seekh kebabs off real coal, karahi finished at your table, naan straight from the tandoor, and doodh patti until two in the morning.</p>
-          <div class="hero-actions">
-            <a class="btn btn-fire" href="#menu">See the menu and order</a>
-            <a class="btn btn-ghost" href="#book">Book a table</a>
-          </div>
-          <dl class="hero-facts">
-            <div><dt>Open today</dt><dd>6 pm – 2 am</dd></div>
-            <div><dt>Orders</dt><dd>On WhatsApp, pick-up or delivery</dd></div>
-            <div><dt>Seats</dt><dd>Rooftop and family hall</dd></div>
-          </dl>
+      <!-- Hero -->
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-media">
+          <img src="img/hero.webp" alt="A chef pours sauce over a plated course on a dark counter" width="2200" height="1467" fetchpriority="high" />
         </div>
-      </section>
-
-      <section class="section" id="signature" aria-labelledby="sig-title">
-        <div class="wrap">
-          <p class="kicker">From the coal</p>
-          <h2 id="sig-title">Three things people <em>come back</em> for.</h2>
-          <div class="sig-grid">
-            <article class="sig">
-              <span class="sig-no">01</span>
-              <h3>Reshmi seekh</h3>
-              <p>Hand-minced chicken, cream and green chilli, pressed onto skewers and kissed by the coal for exactly four minutes.</p>
-              <p class="price">Rs 1,150</p>
-            </article>
-            <article class="sig sig-hot">
-              <span class="sig-no">02</span>
-              <h3>Smoked mutton karahi</h3>
-              <p>Bone-in mutton, tomato and ginger, finished in the wok and smoked under a lid with a live coal. Serves two.</p>
-              <p class="price">Rs 3,400</p>
-            </article>
-            <article class="sig">
-              <span class="sig-no">03</span>
-              <h3>Kulhar doodh patti</h3>
-              <p>Strong tea boiled down with full-cream milk, poured from height into a clay cup. The way to end the night.</p>
-              <p class="price">Rs 220</p>
-            </article>
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="hero-inner">
+          <p class="eyebrow reveal-up">Dogpatch · San Francisco</p>
+          <h1 id="hero-title" class="hero-title">
+            <span class="line"><span>Fire, fog</span></span>
+            <span class="line"><span>and seven <em>courses.</em></span></span>
+          </h1>
+          <p class="hero-sub reveal-up">A fourteen-seat tasting counter built around one hearth of almond wood and binchotan.</p>
+          <div class="hero-actions reveal-up">
+            <a class="btn btn-gold" href="#reserve">Reserve a seat</a>
+            <a class="btn btn-line" href="#menu">See tonight's menu</a>
           </div>
         </div>
+        <dl class="hero-bar reveal-up">
+          <div><dt>Open</dt><dd>Wednesday – Sunday</dd></div>
+          <div><dt>Seatings</dt><dd>5:30 pm and 8:45 pm</dd></div>
+          <div><dt>Counter</dt><dd>14 seats, one fire</dd></div>
+          <div><dt>Tasting</dt><dd>From $295 per guest</dd></div>
+        </dl>
       </section>
 
-      <section class="section menu" id="menu" aria-labelledby="menu-title">
-        <div class="wrap">
-          <p class="kicker">The menu</p>
-          <h2 id="menu-title">Pick, add, and <em>send it</em> on WhatsApp.</h2>
-          <div class="tabs" role="tablist" aria-label="Menu categories" id="tabs"></div>
-          <div class="menu-list" id="menuList" role="tabpanel" aria-labelledby="tab-bbq"></div>
-          <p class="sr-only" role="status" id="cartStatus"></p>
-        </div>
+      <!-- Manifesto -->
+      <section class="manifesto" aria-label="Our kitchen">
+        <p class="manifesto-text" id="manifesto">We cook over a single fire for fourteen guests a night. The fog rolls in off the bay around eight. By then the coals are white, the oysters are on ice, and the first course is already on its way to you.</p>
       </section>
 
-      <section class="section book" id="book" aria-labelledby="book-title">
-        <div class="wrap book-grid">
+      <!-- Menu -->
+      <section class="menu" id="menu" aria-labelledby="menu-title">
+        <div class="menu-head">
           <div>
-            <p class="kicker">Book a table</p>
-            <h2 id="book-title">Rooftop at sunset, or the <em>family hall.</em></h2>
-            <p class="muted">Tell us when you are coming and how many of you there are. We confirm every booking by phone.</p>
+            <p class="eyebrow">Tonight's tasting · $295</p>
+            <h2 id="menu-title">Seven courses, <em>one fire.</em></h2>
           </div>
-          <form class="form" id="bookForm" novalidate>
-            <div class="field">
-              <label for="b-name">Your name</label>
-              <input id="b-name" name="name" autocomplete="name" required aria-describedby="b-name-err" />
-              <p class="err" id="b-name-err"></p>
+          <div class="pairing" role="radiogroup" aria-label="Show pairings">
+            <button type="button" role="radio" aria-checked="true" data-pair="wine">Wine pairing</button>
+            <button type="button" role="radio" aria-checked="false" data-pair="zero">Zero-proof</button>
+            <button type="button" role="radio" aria-checked="false" data-pair="none">Food only</button>
+          </div>
+        </div>
+        <div class="courses" id="courses">
+          <div class="courses-track" id="coursesTrack"></div>
+          <div class="courses-progress" aria-hidden="true"><span id="courseIndex">01</span><i><b id="courseBar"></b></i><span>07</span></div>
+        </div>
+      </section>
+
+      <!-- Ingredient band -->
+      <div class="band" aria-hidden="true">
+        <div class="band-track">
+          <span>Tomales Bay</span><span>Hokkaido</span><span>Miyazaki</span><span>Meyer lemon</span><span>Almond wood</span><span>Binchotan</span><span>Sea fennel</span><span>Brown butter</span>
+          <span>Tomales Bay</span><span>Hokkaido</span><span>Miyazaki</span><span>Meyer lemon</span><span>Almond wood</span><span>Binchotan</span><span>Sea fennel</span><span>Brown butter</span>
+        </div>
+      </div>
+
+      <!-- The room -->
+      <section class="room" id="room" aria-labelledby="room-title">
+        <figure class="room-wide parallax">
+          <img src="img/room.webp" alt="A dark dining room lit by low hanging lamps" width="1800" height="1200" loading="lazy" />
+        </figure>
+        <div class="room-grid">
+          <figure class="room-chef parallax">
+            <img src="img/chef.webp" alt="A chef plates a delicate course with fine tweezers" width="1200" height="1500" loading="lazy" />
+          </figure>
+          <div class="room-copy">
+            <p class="eyebrow">The room</p>
+            <h2 id="room-title">Fourteen seats around <em>the hearth.</em></h2>
+            <p>Chef Mara Ellison cooks every course within arm's reach of the counter. There is no pass and no back kitchen: what you watch being made is what arrives in front of you, minutes later.</p>
+            <p>Seafood comes from Tomales Bay and Hokkaido, produce from farms an hour north, and the fire is fed with almond wood from the Central Valley.</p>
+            <ul class="room-facts">
+              <li><span>2</span> seatings a night</li>
+              <li><span>14</span> seats at the counter</li>
+              <li><span>1</span> fire, lit at 3 pm</li>
+            </ul>
+          </div>
+          <figure class="room-small parallax">
+            <img src="img/pendants.webp" alt="Pendant lamps glowing over the dining tables" width="1800" height="1200" loading="lazy" />
+          </figure>
+        </div>
+      </section>
+
+      <!-- Reserve -->
+      <section class="reserve" id="reserve" aria-labelledby="reserve-title">
+        <div class="reserve-head">
+          <p class="eyebrow">Reservations</p>
+          <h2 id="reserve-title">Hold your <em>seat.</em></h2>
+          <p class="muted">Bookings open three weeks ahead. Availability shown here is a sample.</p>
+        </div>
+
+        <div class="reserve-grid">
+          <form class="booker" id="booker" novalidate>
+            <!-- Step 1: the evening -->
+            <div class="step" id="step1">
+              <fieldset class="group">
+                <legend>Experience</legend>
+                <div class="choices">
+                  <label class="choice">
+                    <input type="radio" name="exp" value="counter" checked />
+                    <span class="choice-body"><strong>Counter tasting</strong><span>Seven courses at the hearth</span><b>$295</b></span>
+                  </label>
+                  <label class="choice">
+                    <input type="radio" name="exp" value="table" />
+                    <span class="choice-body"><strong>Chef's table</strong><span>Nine courses, kitchen-side, max 6</span><b>$395</b></span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <div class="group-row">
+                <fieldset class="group">
+                  <legend>Guests</legend>
+                  <div class="stepper">
+                    <button type="button" id="guestMinus" aria-label="One less guest">−</button>
+                    <output id="guestCount" aria-live="polite">2</output>
+                    <button type="button" id="guestPlus" aria-label="One more guest">+</button>
+                  </div>
+                </fieldset>
+                <fieldset class="group">
+                  <legend>Pairing</legend>
+                  <select id="pairSelect" aria-label="Pairing">
+                    <option value="wine">Wine pairing · +$165</option>
+                    <option value="zero">Zero-proof pairing · +$95</option>
+                    <option value="none">No pairing</option>
+                  </select>
+                </fieldset>
+              </div>
+
+              <fieldset class="group">
+                <legend>Date</legend>
+                <div class="dates" id="dates" role="radiogroup" aria-label="Choose a date"></div>
+              </fieldset>
+
+              <fieldset class="group">
+                <legend>Seating</legend>
+                <div class="times" id="times" role="radiogroup" aria-label="Choose a seating"></div>
+              </fieldset>
+
+              <button type="button" class="btn btn-gold btn-block" id="toDetails">Continue</button>
+              <p class="step-error" id="step1Error" role="status"></p>
             </div>
-            <div class="field">
-              <label for="b-phone">Phone</label>
-              <input id="b-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="03xx xxxxxxx" required aria-describedby="b-phone-err" />
-              <p class="err" id="b-phone-err"></p>
-            </div>
-            <div class="row">
+
+            <!-- Step 2: details -->
+            <div class="step" id="step2" hidden>
+              <button type="button" class="back" id="backTo1">← Change the evening</button>
               <div class="field">
-                <label for="b-date">Date</label>
-                <input id="b-date" name="date" type="date" required aria-describedby="b-date-err" />
-                <p class="err" id="b-date-err"></p>
+                <label for="r-name">Full name</label>
+                <input id="r-name" name="name" autocomplete="name" aria-describedby="r-name-err" />
+                <p class="err" id="r-name-err"></p>
               </div>
               <div class="field">
-                <label for="b-time">Time</label>
-                <select id="b-time" name="time">
-                  <option>7:00 pm</option><option>8:00 pm</option><option selected>9:00 pm</option><option>10:00 pm</option><option>11:00 pm</option><option>12:00 am</option>
+                <label for="r-email">Email</label>
+                <input id="r-email" name="email" type="email" autocomplete="email" aria-describedby="r-email-err" />
+                <p class="err" id="r-email-err"></p>
+              </div>
+              <div class="field">
+                <label for="r-occasion">Occasion (optional)</label>
+                <select id="r-occasion" name="occasion">
+                  <option value="">None</option><option>Birthday</option><option>Anniversary</option><option>Business dinner</option><option>Proposal</option>
                 </select>
               </div>
               <div class="field">
-                <label for="b-guests">Guests</label>
-                <select id="b-guests" name="guests">
-                  <option>2</option><option selected>4</option><option>6</option><option>8</option><option>10+</option>
-                </select>
+                <label for="r-diet">Allergies or dietary needs (optional)</label>
+                <input id="r-diet" name="diet" maxlength="160" placeholder="Shellfish allergy, no pork…" />
               </div>
+              <button type="submit" class="btn btn-gold btn-block">Confirm reservation</button>
+              <p class="step-error" id="step2Error" role="status"></p>
             </div>
-            <div class="field">
-              <label for="b-seat">Seating</label>
-              <select id="b-seat" name="seat"><option>Rooftop</option><option>Family hall</option><option>No preference</option></select>
+
+            <!-- Step 3: confirmation -->
+            <div class="step confirm" id="step3" hidden tabindex="-1">
+              <p class="eyebrow">Reservation held</p>
+              <h3 id="confirmTitle">See you soon.</h3>
+              <p class="confirm-code">Confirmation <strong id="confirmCode">OF-0000</strong></p>
+              <p id="confirmText" class="muted"></p>
+              <div class="confirm-actions">
+                <button type="button" class="btn btn-gold" id="addCal">Add to calendar</button>
+                <button type="button" class="btn btn-line" id="newBooking">Make another</button>
+              </div>
+              <p class="concept-note">Concept site: no reservation was made and no card was charged.</p>
             </div>
-            <button class="btn btn-fire" type="submit">Request the table</button>
-            <p class="form-status" id="bookStatus" role="status"></p>
           </form>
+
+          <aside class="summary" aria-labelledby="sum-title">
+            <h3 id="sum-title">Your evening</h3>
+            <dl class="sum-lines" id="sumLines"></dl>
+            <dl class="sum-money" id="sumMoney" aria-live="polite"></dl>
+            <p class="sum-note">A $100 per guest deposit holds the seat and comes off the final bill. Free cancellation up to 72 hours before.</p>
+          </aside>
         </div>
       </section>
 
-      <section class="section visit" id="visit" aria-labelledby="visit-title">
-        <div class="wrap visit-grid">
+      <!-- Visit -->
+      <section class="visit" id="visit" aria-labelledby="visit-title">
+        <div class="visit-grid">
           <div>
-            <p class="kicker">Visit</p>
-            <h2 id="visit-title">Follow the <em>smoke.</em></h2>
-            <address>
-              14-C Food Street, Gulberg III<br />Lahore, Pakistan
-            </address>
-            <p class="muted small">Placeholder address and phone: DHUAN is a concept restaurant.</p>
+            <p class="eyebrow">Visit</p>
+            <h2 id="visit-title">Dogpatch, <em>by the water.</em></h2>
+            <p class="muted">The exact address arrives with your confirmation. Street parking is easy after six; the T Third stops two blocks away.</p>
           </div>
-          <table class="hours">
-            <caption class="sr-only">Opening hours</caption>
-            <tbody>
-              <tr><th scope="row">Monday – Thursday</th><td>6 pm – 1 am</td></tr>
-              <tr><th scope="row">Friday</th><td>2 pm – 2 am</td></tr>
-              <tr><th scope="row">Saturday – Sunday</th><td>1 pm – 2 am</td></tr>
-              <tr><th scope="row">Phone</th><td>0300 000 0000</td></tr>
-            </tbody>
-          </table>
+          <dl class="visit-list">
+            <div><dt>Seatings</dt><dd>Wednesday – Sunday, 5:30 pm and 8:45 pm</dd></div>
+            <div><dt>Bar</dt><dd>Walk-ins for wine and snacks from 5 pm</dd></div>
+            <div><dt>Private dining</dt><dd>The whole counter for up to 14 guests</dd></div>
+            <div><dt>Contact</dt><dd>reservations@onyxandfog.example</dd></div>
+          </dl>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <div class="wrap footer-row">
-        <p class="logo">DHUAN<span>Charcoal Kitchen</span></p>
-        <p class="muted small">A concept restaurant website: the brand, menu and prices are fictional. Designed and built by <a href="https://zainaliarif-portfolio.vercel.app">Zain Ali Arif</a>.</p>
+      <p class="footer-mark" aria-hidden="true">Onyx <em>&amp;</em> Fog</p>
+      <div class="footer-row">
+        <p>A concept restaurant website. The restaurant, chef, menu and prices are fictional. Designed and built by <a href="https://zainaliarif-portfolio.vercel.app">Zain Ali Arif</a>.</p>
+        <p class="credits">Photography from Unsplash: Urban Gyllström, Anima Visual, Inc inductgroup, Trình Minh Thư, Tadahiro Higuchi, Zion C, Madeline Liu, Alfonso Betancourt, takahiro taguchi, Eirc Shi.</p>
       </div>
     </footer>
 
-    <!-- Order bar and order dialog -->
-    <div class="orderbar" id="orderBar" hidden>
-      <p><strong id="barCount">0 items</strong> · <span id="barTotal">Rs 0</span></p>
-      <button class="btn btn-fire btn-sm" type="button" id="openOrder" aria-haspopup="dialog">Review order</button>
-    </div>
-
-    <dialog class="order" id="orderDialog" aria-labelledby="order-title">
-      <div class="order-head">
-        <h2 id="order-title">Your order</h2>
-        <button class="icon-btn" type="button" data-close aria-label="Close order">&times;</button>
-      </div>
-      <ul class="order-list" id="orderList"></ul>
-      <p class="order-total">Total <strong id="orderTotal">Rs 0</strong></p>
-      <label class="order-note" for="orderNote">Notes for the kitchen (optional)</label>
-      <input id="orderNote" placeholder="Less spicy, extra raita…" maxlength="140" />
-      <button class="btn btn-fire btn-block" type="button" id="sendOrder">Send order on WhatsApp</button>
-      <div class="preview" id="preview" hidden>
-        <p class="preview-label">This is the message WhatsApp would open with:</p>
-        <pre id="previewText"></pre>
-        <p class="muted small">Concept site: no real number is connected, so nothing was sent. On a live site this button opens WhatsApp with the order ready to send.</p>
-      </div>
-    </dialog>
-
+    <script src="vendor/gsap.min.js"></script>
+    <script src="vendor/ScrollTrigger.min.js"></script>
+    <script src="vendor/lenis.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
